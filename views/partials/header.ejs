@@ -1,0 +1,31 @@
+<header class="header">
+    <img src="/img/cat199.png" width="100" height="100" />
+    <h2>CatSLover</h2>
+    <nav class="header__nav">
+        <ul>
+            <li>
+                <a href="/" class="<%= isActiveRoute('/')%>">Home</a>
+            </li>
+
+            <li>
+                <a href="/about" class="<%= isActiveRoute('/about')%>">About</a>
+            </li>
+
+            <li>
+                <a href="/videos" class="<%= isActiveRoute('/videos')%>">Videos</a>
+            </li>
+
+            <li>
+                <a href="/gallery" class="<%= isActiveRoute('/gallery')%>">Gallery</a>
+            </li>
+
+            <li>
+                <a href="/contact" class="<%= isActiveRoute('/contact')%>">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header__button">
+        <button class="searchBtn" aria-expanded="false">Search<i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+</header>

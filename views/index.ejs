@@ -1,0 +1,49 @@
+<div class="author">
+    <br /><br /><br />
+    <p class="para">  
+     
+        <h1>Welcome</h1><p class="para">
+        &nbsp;&nbsp; Welcome to "CatSLoveR," a blog dedicated to all cat lovers! Whether you're a
+         seasoned cat owner, a prospective adopter, or simply an admirer of these graceful creatures, 
+         this blog is for you. Here, I aim to provide valuable information and resources to help you 
+         better understand and enjoy the company of your feline friends. From valuable information on 
+         cat breeds and their unique characteristics to practical tips on grooming, 
+        feeding, and healthcare, I cover a wide range of topics to cater to every cat lover's needs</p>
+    </p>
+
+    <p class="para">
+        &nbsp; &nbsp;
+        My blog also delves into the fascinating world of cat behavior and training.
+         Additionally, "CatSLoveR" is more than just a source of information about 
+         different cat breeds, characteristics, food, and other topics. You can get 
+         to know different cat breeds through
+         this website, as there are over 70 cat breeds in the world."
+    </p>
+</div>
+
+<img src="/img/mm.png" alt="Person looking out through window" class="hero-image" width="150" height="150" />
+<img src="/img/cat1.png" alt="Person looking out through window" class="hero-image" width="200" height="150" />
+<img src="/img/cat3.png" alt="Person looking out through window" class="hero-image" width="200" height="120" />
+<img src="/img/cat71.png" alt="Person looking out through window" class="hero-image" width="200" height="140" />
+<img src="/img/cat91.png" alt="Person looking out through window" class="hero-image" width="200" height="130" />
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(post =>{ %>
+
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <% if(nextPage !== null) { %>
+
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+</section>
